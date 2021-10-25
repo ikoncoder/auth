@@ -16,11 +16,11 @@ $users = new UserFactory();
 $user = $users->getRandomUser();
 ```
 
-##Contributing 
+## Contributing 
 Pull requests are welcome.
 For major change to the app, please open an issue first and discuss what you would like to change.
 
 Please be sure to make an update to the test as appropiate.
 
-##License 
+## License 
 [MIT](./LICENSE.md)
