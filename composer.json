@@ -16,5 +16,15 @@
     ],
     "require-dev": {
         "phpunit/phpunit": "^9.5"
+    },
+    "extra":{
+        "laravel":{
+            "provider":[
+                "Ikoncoder\\Auth\\Providers\\IkoncoderAuthServiceProvider"
+            ],
+            "aliases":{
+                "AuthUser":"Ikoncoder\\Auth\\Facades\\AuthUser"
+            }
+        }
     }
 }
