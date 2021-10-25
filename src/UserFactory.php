@@ -1,26 +1,25 @@
-<?php 
+<?php
 
 namespace Ikoncoder\Auth;
 
-class UserFactory 
-{   
-		
-	protected $users = [
+class UserFactory
+{
+    protected $users = [
         'eric',
         'john',
         'mary',
-       
+
     ];
 
-	public function __construct(array $users = null)
-	{
-		
-		if($users){
-			$this->users = $users;
-		}
-	}
-	public function getRandomUser()
-	{
-		return $this->users[array_rand($this->users)];
-	}
+    public function __construct(array $users = null)
+    {
+        if ($users) {
+            $this->users = $users;
+        }
+    }
+
+    public function getRandomUser()
+    {
+        return $this->users[array_rand($this->users)];
+    }
 }
