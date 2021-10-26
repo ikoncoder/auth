@@ -8,15 +8,14 @@ use Illuminate\Support\ServiceProvider;
 
 class IkoncoderAuthServiceProvider extends ServiceProvider
 {
- public function boot()
- {
-   if($this->app->runningInConsole()){
-     $this->commands([
-       AuthUser::class
-     ]);
-   }  
- }
-   
+    public function boot()
+    {
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                AuthUser::class,
+            ]);
+        }
+    }
 
     public function register()
     {
