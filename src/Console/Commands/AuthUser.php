@@ -2,8 +2,8 @@
 
 namespace Ikoncoder\Auth\Console\Commands;
 
-use Illuminate\Console\Command;
 use Ikoncoder\Auth\Facades\AuthUser;
+use Illuminate\Console\Command;
 
 class AuthUser extends Command
 {
