@@ -2,6 +2,7 @@
 
 namespace Ikoncoder\Auth\Providers;
 
+use Illuminate\Routing\Route;
 use Ikoncoder\Auth\UserFactory;
 use Ikoncoder\Auth\Facades\AuthUser;
 use Illuminate\Support\ServiceProvider;
