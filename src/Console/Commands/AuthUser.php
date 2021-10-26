@@ -8,7 +8,7 @@ class AuthUser extends Command
 {
     protected $signature = 'auth-user';
 
-    protected $description = 'Out an auth user';
+    protected $description = 'Output an auth user';
 
     public function handle()
     {

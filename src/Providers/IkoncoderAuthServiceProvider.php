@@ -12,7 +12,7 @@ class IkoncoderAuthServiceProvider extends ServiceProvider
  {
    if($this->app->runninInConsole()){
      $this->commands([
-       AuthUser::class
+       AuthUser::class,
      ]);
    }  
  }
