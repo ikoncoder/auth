@@ -2,10 +2,10 @@
 
 namespace Ikoncoder\Auth\Providers;
 
-use Illuminate\Routing\Route;
-use Ikoncoder\Auth\UserFactory;
 use Ikoncoder\Auth\Facades\AuthUser;
 use Ikoncoder\Auth\Http\Controllers\AuthUserController;
+use Ikoncoder\Auth\UserFactory;
+use Illuminate\Routing\Route;
 use Illuminate\Support\ServiceProvider;
 
 class IkoncoderAuthServiceProvider extends ServiceProvider
@@ -27,19 +27,19 @@ class IkoncoderAuthServiceProvider extends ServiceProvider
 
         //publish views
         $this->publishes([
-            __DIR__.'/../resources/views' => resource_path('views/vendor/auth-user')
-        ],'views');
+            __DIR__.'/../resources/views' => resource_path('views/vendor/auth-user'),
+        ], 'views');
 
         //publish config
         $this->publishes([
-            __DIR__.'/../resconfig/auth-user' => config_path('config/auth-user.php')
-        ],'config');
+            __DIR__.'/../resconfig/auth-user' => config_path('config/auth-user.php'),
+        ], 'config');
 
-        //publish migrations 
-        if(!class_exists(CreateAdminsTable)){
+        //publish migrations
+        if (! class_exists(CreateAdminsTable)) {
             $this->publishes([
-                __DIR__.'/../database/migrations/create_admins_table.php.stub' => database_path('database/migrations/'.date('Y_m_d_His',time()).'create_admins_table.php')
-            ],'migrations');
+                __DIR__.'/../database/migrations/create_admins_table.php.stub' => database_path('database/migrations/'.date('Y_m_d_His', time()).'create_admins_table.php'),
+            ], 'migrations');
         }
     }
 
@@ -48,9 +48,9 @@ class IkoncoderAuthServiceProvider extends ServiceProvider
         //register Facade
         $this->app->bind('auth-user', function () {
             return new UserFactory();
-        }); 
+        });
 
-        //config 
-        $this->mergeConfigFrom(__DIR__.'/../config/auth-user.php','auth-user');
+        //config
+        $this->mergeConfigFrom(__DIR__.'/../config/auth-user.php', 'auth-user');
     }
 }
