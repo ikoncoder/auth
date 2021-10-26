@@ -1,10 +1,10 @@
-<?php 
+<?php
 
 namespace Ikoncoder\Auth\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class AuthUser extends Command 
+class AuthUser extends Command
 {
     protected $signature = 'auth-user';
 
