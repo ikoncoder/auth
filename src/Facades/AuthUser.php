@@ -1,6 +1,6 @@
 <?php
 
-namespace Ikoncoder\Auth\Facades;
+namespace Ikoncoder\Auth;
 
 use Illuminate\Support\Facades\Facade;
 
