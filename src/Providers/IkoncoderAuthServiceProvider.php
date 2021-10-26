@@ -10,7 +10,7 @@ class IkoncoderAuthServiceProvider extends ServiceProvider
 {
  public function boot()
  {
-   if($this->app->runninInConsole()){
+   if($this->app->runningInConsole()){
      $this->commands([
        AuthUser::class,
      ]);
