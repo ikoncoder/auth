@@ -55,22 +55,24 @@ class LaravelTest extends TestCase
     {
         $this->get('/auth-user')
          ->assertViewIs('auth-user::user')
-         ->assertViewHas('name','eric')
+         ->assertViewHas('name', 'eric')
          ->assertStatus(200);
-    } 
-protected function getEnvironmentSetUp($app){
-    include_once __DIR__.'/../database/migrations/create_admins_table.php.stub';
-    (new \CreateAdminsTable)->up();
-}
+    }
 
-public function it_can_access_the_database(){
-    $user = new  User();
-    $user->user = 'eric';
-    $user->save(); 
+    protected function getEnvironmentSetUp($app)
+    {
+        include_once __DIR__.'/../database/migrations/create_admins_table.php.stub';
+        (new \CreateAdminsTable)->up();
+    }
 
-    $newUser = User::find($user->id);
+    public function it_can_access_the_database()
+    {
+        $user = new  User();
+        $user->user = 'eric';
+        $user->save();
 
-    $this->assertSame($newUser->user,'eric');
-}
+        $newUser = User::find($user->id);
 
+        $this->assertSame($newUser->user, 'eric');
+    }
 }
